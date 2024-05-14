@@ -1,2 +1,5 @@
-# meet-my-dog
-A simple website for my dog. Using basic skills for web development, this initial project helps my self-learning process.
+# Meet My Dog!
+
+## Overview
+A simple webpage for my dog's profile. 
+Using basic skills for web development, this project helps my self-learning process.
