@@ -2,50 +2,127 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/styles/main.css">
         <title>Meet My Dog!</title>
-        <meta name="viewpoint" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="header">
-            <h1>Meet My Dog!</h1>
-            <p>header part is here</p>
-        </div>
-        <div class="section-grid">
-            <div class="left-secion-grid">
-                <div class="card">
+        <header class="header">
+            <div class="header-inner">
+                <div class="header-logo-box">
+                    <img src="assets/icons/logo_icon.png" alt="logo" class="header-logo"/>
+                    <h2>Meet My Dog!</h2>
+                </div>
+                <div class="header-nav">
+                    <ul>
+                        <li>
+                            <a href=#>
+                                <div class="icon">
+                                    <img src="assets/icons/find_icon.png" alt="icons" class="nav-icon"/>
+                                </div>
+                                <div class="name">
+                                    <span data-text="Find New Friends">Find New Friend</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=#>
+                                <div class="icon">
+                                    <img src="assets/icons/friend_icon.png" alt="icons" class="nav-icon"/>
+                                </div>
+                                <div class="name">
+                                    <span data-text="Your Friends">Your Friends</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=#>
+                                <div class="icon">
+                                    <img src="assets/icons/messsage_icon.png" alt="icons" class="nav-icon"/>
+                                </div>
+                                <div class="name">
+                                    <span data-text="Message">Message</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=#>
+                                <div class="icon">
+                                    <img src="assets/icons/notification_icon.png" alt="icons" class="nav-icon"/>
+                                </div>
+                                <div class="name">
+                                    <span data-text="notification">Notification</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=#>
+                                <div class="icon">
+                                    <img src="assets/icons/logo_icon.png" alt="icons" class="nav-icon"/>
+                                </div>
+                                <div class="name">
+                                    <span data-text="Profile">Profile</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="section-grid">
+                <div class="profile-card">
                     <img src="assets/images/Thor_1.jpg" class="profile-picture"/>
                     <h1>Thor</h1>
                     <p>contents 1</p>
                 </div>
-                <div class="card">
-                    <form action="#">
-                        <label for="email">
-                            Email: <input type="email" id="email" placeholder="Enter our email" />
-                        </label>
-                        <label>
-                            Message: <textarea id="message">Your Message</textarea>
-                        </label>
-                        <input type="submit" valid="Send Message" />
-                    </form>
-                 </div>
-            </div>
-            <div class="right-section-grid">
-                <div class="right-section-first-grid">
-                    <div class="card">
-                        <h2>Bio</h2>
-                        <p>contents 2</p>
+                <div class="right-grid">
+                    <div class="right-grid-top">
+                        <div class="card">
+                            <h3>Bio</h3>
+                            <p>contents 2</p>
+                        </div>
+                        <div class="card">
+                            <h3>Favorite Treat</h3>
+                            <p>contents 3</p>
+                        </div>
                     </div>
                     <div class="card">
-                        <h2>Favorite Treat</h2>
-                        <p>contents 3</p>
+                        <h3>Personality</h3>
+                        <p>contents 4</p>
+                    </div>
+                    <div class="right-grid-bottom">
+                        <div class="card">
+                            <h3>what I like...</h3>
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>what I hate...</h3>
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Wanna Be My Friend?</h3>
+                            <form action="#">
+                                <label for="email">
+                                    Email: <input type="email" id="email" placeholder="Enter our email" />
+                                </label>
+                                <label>
+                                    Message: <textarea id="message">Your Message</textarea>
+                                </label>
+                                <input type="submit" valid="Send Message" />
+                            </form>
+                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <h2>Personality</h2>
-                    <p>contents 4</p>
-                </div>
-            </div>
-         </div>
+             </div>
+        </main>
     </body>
 </html>

@@ -1,53 +1,153 @@
 body {
     background-color: rgb(253, 251, 243);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
 }
+/* Header & Header Navigation*/
 .header {
+    display: inline-table;
     background-color: rgba(107, 97, 78, 0.658);
-    padding: 4px 24px 4px 24px;
+    height: 50px;
+    width: 100vw;
+    margin-left: 0;
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 14px
 }
-.profile-picture {
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    width: 180px;
+.header-inner {
+    height: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo-box {
+    display: flex;
+}
+.header-logo-box h2 {
+    white-space: nowrap;
+}
+.header-logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+.header-nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: center;
+    display: block;
+    height: 75px;
+}
+.header-nav ul {
+    display: flex;
+    list-style: none;
+}
+.header-nav ul li{
+    padding-left: 8px;
+    padding-right: 8px;
+    display: block;
+}
+.header-nav ul li:hover {
+    background-color: rgba(107, 97, 78, 0.719);
+}
+.nav-icon {
+    width: 40px;
+}
+.header-nav li a .icon {
+    display: block;
+    width: 85px;
     height: auto;
-    box-shadow: 0 6px 8px 0 rgba(34, 60, 80, 16);
-    transition: all ease-in-out;
-    -webkit-transition: all ease-in-out;
-    -moz-transition: all ease-in-out;
-    -ms-transition: all ease-in-out;
-    -o-transition: all ease-in-out;
+    align-items: center;
+    padding-top: 4px;
+    padding-bottom: 2px;
+
 }
-.profile-picture:hover {
-    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 16);
+
+/*Main Part*/
+.profile-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 280px;
+    height: auto;
+    border-color: whitesmoke;
+    box-shadow: -5px -5px 10px 0 rgba(250, 248, 245, 0.658), 5px 5px 10px 0 rgba(88, 74, 46, 0.568);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.profile-card > h1 {
+    text-align: center;
+}
+.album-picture {
+    box-shadow: 0 4px 8px 0 rgba(197, 172, 124, 0.568);
+
 }
 .section-grid {
     display: grid;
-    grid-template-columns: 1fr 2.4fr;
+    grid-template-columns: 1fr 2.5fr;
     gap: 10px 2em;
 }
-.left-section-grid {
+.left-grid {
     display: grid;
-    grid-template-rows: 2.5fr 1fr;
+    grid-template-rows: 2fr 1fr;
     gap: 10px 2em;
 }
-.right-section-grid {
+.left-grid-bottom {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr;
     gap: 10px 2em;
 }
-.right-section-first-grid {
+.right-grid {
+    display: grid;
+    grid-template-rows: 50% 50% 50%;
+    gap: 10px 2em;
+}
+.right-grid-top {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px 2em;
 }
+.right-grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 2em;
+}
+.profile-card {
+    background-color: rgb(248, 246, 234);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-top: 14px;
+    margin-left: 30px;
+    margin-right: 15px;
+    padding: 18px;
+    box-shadow: 0 6px 8px 0 gainsboro;
+}
 .card {
     background-color: rgba(197, 172, 124, 0.568);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin-top: 14px;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 8px 0 gainsboro;
+}
+.album-card {
+    box-shadow: 0 4px 8px 0 rgba(197, 172, 124, 0.568);
     border-radius: 17px;
     -webkit-border-radius: 17px;
     -moz-border-radius: 17px;
@@ -56,6 +156,20 @@ body {
     margin-top: 14px;
     margin-left: 12px;
     margin-right: 12px;
-    padding: 15px;
+    padding: 18px;
     box-shadow: 0 6px 8px 0 gainsboro;
+}
+@media (max-width: 680px) {
+    .section-grid {
+        grid-template-columns: 100%;
+    }
+    .right-grid {
+        grid-template-columns: 100%;
+    }
+    .right-grid-top {
+        grid-template-columns: 100%;
+    }
+    .right-grid-bottom {
+        grid-template-columns: 100%;
+    }
 }
