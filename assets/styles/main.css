@@ -1,6 +1,6 @@
 body {
     background-color: rgb(253, 251, 243);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Source Sans 3", sans-serif;
     margin: 0;
 }
 /*----------- Header & Header Navigation -------------*/
@@ -28,12 +28,19 @@ body {
 }
 .header-logo-box h2 {
     white-space: nowrap;
+    font-family: "Caveat", cursive;
+    font-size: 2em;
+    margin-block-start: auto;
+    margin-block-end: auto;
 }
 .header-logo {
     display: block;
     width: 50px;
     height: 50px;
     margin-right: 8px;
+}
+.header-nav {
+    
 }
 .header-nav ul li a {
     color: inherit;
@@ -77,7 +84,7 @@ body {
 
 }
 .nav-icon-profile {
-    width: 40px;
+    width: 38px;
     height: auto;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -86,23 +93,13 @@ body {
     -o-border-radius: 50%;
     border-style: solid;
     border-color: whitesmoke;
-    border-width: 2px;
+    border-width: 1px;
 }
 
 /*-----------------Main Part-------------------*/
 .section-grid {
     display: grid;
     grid-template-columns: 1fr 2.5fr;
-    gap: 10px 2em;
-}
-.left-grid {
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    gap: 10px 2em;
-}
-.left-grid-bottom {
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
     gap: 10px 2em;
 }
 .right-grid {
@@ -152,12 +149,6 @@ body {
     -o-border-radius: 7px;
 }
 .profile-card {
-    background-color: rgb(248, 246, 234);
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
     margin-top: 14px;
     margin-left: 30px;
     margin-right: 15px;
@@ -166,48 +157,79 @@ body {
 }
 .profile-card h1 {
     text-align: center;
+    margin-block-start: 0.32em;
+    margin-block-end: 0;
 }
 .location {
     text-align: center;
-    padding-bottom: 4px;
-    margin-bottom: 14px;
+    margin-block-end: 0.62em;
 }
 .location  i::after {
     content: "Grove, OK";
     padding-left: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.title-box h4 {
+    color: rgba(107, 97, 78, 0.658);
+    margin-block-start: 0;
+    margin-block-end: 0.42em;
+    padding-left: 0.52em;
+    font-weight: 300;
+    font-size: 1em;
+}
+.title-line .title-box::after {
+    content: " ";
+    height: 0.9px;
+    width: 75%;
+    background: rgba(107, 97, 78, 0.658);
+    margin-block-start: 0.62em;
+    margin-block-end: 0.62em;
+    margin-left: 70px;
+    position: absolute;
+}
+.title-line {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+.title-box {
+    display: flex;
+    width: 60px;
+    height: auto;
+    text-align: right;
 }
 .breed-box {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .breed-box p {
     padding: 10px;
-    background-color: whitesmoke;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-    border: solid;
-    border-width: 2px;
-    border-color: rgba(197, 172, 124, 0.568);
-    margin-right: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: rgba(197, 172, 124, 0.568);
+    margin-right: 4px;
+    margin-left: 4px;
     text-wrap: nowrap;
+    text-align: center;
+    margin-block-start: 4px;
+    margin-block-end: 4px;
 }
 .basic-info {
-    background-color: rgba(211, 187, 143, 0.295);
     padding: 3px;
     width: 99%;
     display: inline-flex;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    justify-content: center;
 }
 .basic-info ul {
     list-style: none;
+    margin-block-start: 0.52em;
+    margin-block-end: 0.52em;
 }
 .sub-box {
     display: flex;
@@ -222,7 +244,29 @@ body {
     display: block;
     text-align: left;
     padding-bottom: 5px;
+    padding-right: 15px;
     text-wrap: nowrap;
+}
+.keyword {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.keyword p {
+    padding: 8px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgba(197, 172, 124, 0.568);
+    text-wrap: nowrap;
+    text-align: center;
+    margin-block-start: 4px;
+    margin-block-end: 4px;
 }
 
 /*-- Album section --*/
@@ -246,6 +290,7 @@ body {
 
 
 @media (max-width: 786px) {
+    html, body {min-width: 480px;}
     .section-grid {
         grid-template-columns: 100%;
     }
