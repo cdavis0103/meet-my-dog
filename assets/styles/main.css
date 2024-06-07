@@ -1,6 +1,6 @@
 body {
     background-color: rgb(253, 251, 243);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Source Sans 3", sans-serif;
     margin: 0;
 }
 /*----------- Header & Header Navigation -------------*/
@@ -28,6 +28,10 @@ body {
 }
 .header-logo-box h2 {
     white-space: nowrap;
+    font-family: "Caveat", cursive;
+    font-size: 2em;
+    margin-block-start: auto;
+    margin-block-end: auto;
 }
 .header-logo {
     display: block;
@@ -58,15 +62,6 @@ body {
 .nav-icon {
     width: 40px;
 }
-.nav-icon-profile {
-    width: 40px;
-    height: auto;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
 .header-nav li a .icon {
     display: block;
     width: 85px;
@@ -74,67 +69,57 @@ body {
     align-items: center;
     padding-top: 5px;
     padding-bottom: 2px;
+}
 
-}
-.nav-icon-profile {
-    width: 40px;
-    height: auto;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-style: solid;
-    border-color: whitesmoke;
-    border-width: 2px;
-}
 
 /*-----------------Main Part-------------------*/
 .section-grid {
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    gap: 10px 2em;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-bottom: 12px;
 }
-.left-grid {
+.grid-1 {
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
     gap: 10px 2em;
 }
-.left-grid-bottom {
+.grid-2 {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 10px 2em;
 }
-.right-grid {
-    display: grid;
-    grid-template-rows: 50% 50% 50%;
-    gap: 10px 2em;
-}
-.right-grid-top {
+.grid-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px 2em;
 }
-.right-grid-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px 2em;
-}
-
 .card {
     background-color: rgba(197, 172, 124, 0.568);
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     margin-top: 14px;
     margin-left: 12px;
     margin-right: 12px;
     padding: 18px;
     box-shadow: 0 6px 8px 0 gainsboro;
 }
-
+.grid-1 .card {
+    min-width: 440px;
+}
+.grid-2 .grid-inner .card {
+    min-width: 220px;
+}
+.card h3 {
+    padding-left: 25px;
+}
+.inner-card {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 /*-- Profile & Basic info--*/
 .profile-picture {
@@ -152,62 +137,105 @@ body {
     -o-border-radius: 7px;
 }
 .profile-card {
-    background-color: rgb(248, 246, 234);
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    margin-top: 14px;
-    margin-left: 30px;
-    margin-right: 15px;
-    padding: 14px;
-    box-shadow: 0 6px 8px 0 gainsboro;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 .profile-card h1 {
     text-align: center;
+    margin-block-start: 0.32em;
+    margin-block-end: 0;
 }
 .location {
     text-align: center;
-    padding-bottom: 4px;
-    margin-bottom: 14px;
+    margin-block-end: 0.32em;
 }
-.location  i::after {
-    content: "Grove, OK";
+.location span {
+    font-weight: 400;
+    font-style: italic;
     padding-left: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.SNS {
+    display: flex;
+    justify-content: flex-end;
+}
+.SNS i {
+    width: 50px;
+    color: rgba(107, 97, 78, 0.658);
+    font-weight: 500;
+}
+.SNS i:hover {
+    text-shadow: 1px 1px 2px rgba(107, 97, 78, 0.719);
+}
+
+/* title line */
+
+.title-line h4 {
+    width: 50px;
+    color: rgba(107, 97, 78, 0.658);
+    font-weight: 300;
+    font-size: 1em;
+    overflow: hidden;
+    padding-left: 12px;
+    text-align: center;
+    margin-block-start: 0.42em;
+    margin-block-end: 0.42em;
+}
+.title-line h4::after {
+    content: " ";
+    height: 0.9px;
+    width: 75%;
+    background: rgba(107, 97, 78, 0.258);
+    margin-block-start: 0.62em;
+    margin-block-end: 0.62em;
+    margin-left: 70px;
+    position: absolute;
+    vertical-align: middle;
+    left: 0.5em;
+    margin-left: 60px;
+
+}
+.title-line h4::after {
+    left: 0.5em;
+    margin-left: 60px;
+}
+.title-line {
+    display: inline;
+    position: relative;
+}
+
+/* Breed box*/
 .breed-box {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .breed-box p {
-    padding: 10px;
-    background-color: whitesmoke;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-    border: solid;
-    border-width: 2px;
-    border-color: rgba(197, 172, 124, 0.568);
-    margin-right: 5px;
+    padding: 8px;
+    background-color: rgba(197, 172, 124, 0.568);
+    margin-right: 4px;
+    margin-left: 4px;
     text-wrap: nowrap;
+    text-align: center;
+    margin-block-start: 4px;
+    margin-block-end: 4px;
 }
 .basic-info {
-    background-color: rgba(211, 187, 143, 0.295);
     padding: 3px;
     width: 99%;
     display: inline-flex;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    justify-content: center;
 }
 .basic-info ul {
     list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 .sub-box {
     display: flex;
@@ -215,14 +243,36 @@ body {
 .sub-box-left ul li {
     display: block;
     text-align: right;
-    padding-bottom: 5px;
     text-wrap: nowrap;
 }
 .sub-box-right ul li {
     display: block;
     text-align: left;
-    padding-bottom: 5px;
+    padding-right: 15px;
     text-wrap: nowrap;
+}
+.keyword {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+}
+.keyword p {
+    padding: 8px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgba(197, 172, 124, 0.568);
+    text-wrap: nowrap;
+    text-align: center;
+    margin-block-start: 4px;
+    margin-block-end: 4px;
 }
 
 /*-- Album section --*/
@@ -245,17 +295,9 @@ body {
 }
 
 
-@media (max-width: 786px) {
+@media (max-width: 680px) {
+    html, body {min-width: 480px;}
     .section-grid {
-        grid-template-columns: 100%;
-    }
-    .right-grid {
-        grid-template-columns: 100%;
-    }
-    .right-grid-top {
-        grid-template-columns: 100%;
-    }
-    .right-grid-bottom {
         grid-template-columns: 100%;
     }
 }
